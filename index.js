@@ -27,9 +27,12 @@ app.get("/", (req, res) => {
 
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"], // Add your frontend's URL here
-    methods: ["GET", "POST", "PUT", "DELETE"], // Allow the necessary HTTP methods
-    credentials: true, // If you are using cookies or sessions
+    origin: [
+      "http://localhost:3000",
+      "http://localhost:5173",
+      "https://ims-frontend-ashen.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
 app.use(express.json());
